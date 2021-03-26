@@ -7,15 +7,17 @@ const Movies = () => {
     
     
     const ButtonClicked = async() => {
-    const movie= await getmovies();
-    setMovies(movie);};
+    const data = await getmovies();
+    setMovies(data);
+    console.log(data);
+  }
 
 
 
     return (
         <>
-        {movies?.length>0 && movies.map((movie)=>( <Movie title={movie.title} actor={movie.actor}/>
-        ))}
+       {movies?.length > 0 ? movies.map(movie => <Movie title={movie.title} actor={movie.actor} />) : <p>Ingen filmer</p>}
+
           <button onClick={ButtonClicked}>Click here</button>
         </>      
 );

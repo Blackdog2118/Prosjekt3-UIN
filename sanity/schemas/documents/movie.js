@@ -7,7 +7,7 @@ const Movie ={
   fields: [
     {
       title: 'Film',
-      name: 'movie',
+      name: 'title',
       type: 'string',
       description:'Dette er navnet på en Film'
     },

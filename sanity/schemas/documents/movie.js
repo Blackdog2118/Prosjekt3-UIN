@@ -6,25 +6,20 @@ const Movie ={
 
   fields: [
     {
-      title: 'Movie',
+      title: 'Film',
       name: 'movie',
       type: 'string',
-      description:'Dette er navnet på en Film',
+      description:'Dette er navnet på en Film'
     },
-    {
-        title: 'Actor',
-        name: 'actor',
-        type: 'document',
-        fields: [
+ 
           {
             title: 'Actor',
             name: 'actor',
             type: 'reference',
-            to: [{type: 'actor'}],
-            validation: (Rule) => Rule.required(),
+            to: [{type: 'actor'}]
           }
-        ]
-      }
+      
+      
 ]
 }
 
